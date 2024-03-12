@@ -15,6 +15,8 @@ class MvvmViewModel(private val imageRepository: ImageRepository) : ViewModel() 
     private val _imageLiveData = MutableLiveData<Image>()
     val imageLiveData: LiveData<Image> by lazy { _imageLiveData }
 
+
+    //rx를 사용하기 위해
     private var disposable: CompositeDisposable? = CompositeDisposable()
     private var imageCount = 0
 
@@ -23,12 +25,14 @@ class MvvmViewModel(private val imageRepository: ImageRepository) : ViewModel() 
             .doOnSuccess {
                 imageCount++
             }
+                //성공 했을때
             .subscribe { item ->
                 _imageLiveData.value = item
                 _countLiveData.value = "불러온 이미지 수 : $imageCount"
             })
     }
 
+    //메모리 해제
     override fun onCleared() {
         super.onCleared()
         disposable?.dispose()
