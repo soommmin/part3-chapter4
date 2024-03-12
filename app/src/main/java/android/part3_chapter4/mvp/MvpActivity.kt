@@ -9,6 +9,8 @@ import android.part3_chapter4.mvp.model.ImageCountModel
 import android.part3_chapter4.mvp.repository.ImageRepositoryImpl
 import coil.load
 
+//activity <-> presenter 서로 참조, 일대일 구조
+//서로 분리 되어 있어서 test code 가능
 class MvpActivity : AppCompatActivity() ,MvpContractor.View {
     private lateinit var binding: ActivityMvpBinding
     private lateinit var presenter: MvpContractor.Presenter
@@ -45,4 +47,6 @@ class MvpActivity : AppCompatActivity() ,MvpContractor.View {
     override fun showImageCountText(count: Int) {
         binding.imageCountTextView.text = "불러온 이미지 수 : $count"
     }
+
+
 }

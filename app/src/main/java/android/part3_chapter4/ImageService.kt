@@ -13,5 +13,7 @@ interface ImageService {
     @GET("random")
     fun getRandomImage(): Call<ImageResponse>
 
-
+    @Headers("Authorization: Client-ID ____key____")
+    @GET("random")
+    fun getRandomImageRx(): Single<ImageResponse>
 }
