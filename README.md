@@ -2,6 +2,7 @@
 
 # 이미지 추출 앱
 
+<img src="https://github.com/soommmin/part3-chapter4/assets/150005268/6c78b77d-2de2-4b98-98b0-0342fe9d40a5" width="200" height="400"/>
 <img src="https://github.com/soommmin/part3-chapter4/assets/150005268/5fc8c1af-3953-45c5-a6b0-f4027c6ee5b5" width="200" height="400"/>
 <img src="https://github.com/soommmin/part3-chapter4/assets/150005268/f372daa3-8532-4122-af88-f56d08eb5831" width="200" height="400"/>
 
